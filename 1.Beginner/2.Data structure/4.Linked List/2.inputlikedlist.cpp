@@ -15,6 +15,7 @@ class Node{
 Node* takeInput(){
   int data;
   cin>>data;
+
   Node *head=NULL;
   Node *tail=NULL;
 
@@ -25,15 +26,21 @@ Node* takeInput(){
     {
         head=n;
         tail=n;
-    }else{
+    }
+    else{
       tail->next=n;
       tail=n;
     }
     cin>>data;
   }
+
     return head;
 }
-void print(Node *&p){
+
+
+//Show Linked List Node data 
+
+void print(Node *p){
   while (p!=NULL)
   {
     cout<<p->data<<" ";
@@ -42,8 +49,12 @@ void print(Node *&p){
   cout<<endl;
   
 } 
+
+
 int main()
 {
   Node *head=takeInput();
   print(head);
+  
+  return 0;
 }
