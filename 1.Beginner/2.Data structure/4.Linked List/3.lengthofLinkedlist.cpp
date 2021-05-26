@@ -34,13 +34,23 @@ Node* takeInput()
     return head;
 }
 
+// int length(Node *head){
+//     int count=0;
+//     while (head!=NULL)
+//     {    count++;
+//        head=head->next;
+//     }
+//     return count;
+    
+// }
+
+//using Recursive function :try length of Node
 int length(Node *head){
-    int count=0;
-    while (head!=NULL)
-    {    count++;
-       head=head->next;
+    if (head==NULL)
+    {
+        return 0;
     }
-    return count;
+    return 1+length(head->next);
     
 }
 
