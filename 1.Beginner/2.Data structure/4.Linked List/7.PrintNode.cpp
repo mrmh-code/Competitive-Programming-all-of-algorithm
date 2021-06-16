@@ -47,20 +47,26 @@ int length(Node *head){
 }
 
 void printIthNode(Node *head, int i){
-    int n=length(head);
-    if (i<0 ||i>n-1)
+
+    if (i<0)
     {
       cout<<"-1"<<endl;
       return;
     }
 
     int count=1;
-    while (count<=i)
+    while (count<=i && head!=NULL)
     {
         head=head->next;
         count++;
     }
-    cout<<head->data<<endl;
+    if (head)
+    {
+        cout<<head->data<<endl;
+    }else{
+        cout<<"-1"<<endl;
+    }
+    
    
     
 }

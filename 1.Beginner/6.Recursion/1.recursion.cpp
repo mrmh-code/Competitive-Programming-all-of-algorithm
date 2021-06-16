@@ -3,23 +3,27 @@ using namespace std;
 
 //The Time Complexity O(n)
 // " Space      "     O(n)
+//dessending to assending order print The Value
 void Recursion(int N){
-    if (N>0)//Base Condition
+    if (N==0)//Base Condition
     {
-        cout<<N<<endl; //Print The Now Value.
-        Recursion(N-1);//Function calling itself.
+    return ;
     }
+
+    cout<<N<<endl;
+    Recursion(N-1);
    
 }
  
 //different procedure work's Recursion Function
-void Recursion2(int N){
-    if (N>0)
+//assending to dessending
+void  Recursion2(int N){
+    if (N==0)//base condition
     {
-       Recursion2(N-1);
-       cout<<N<<endl;
+   return ;
     }
-     
+     Recursion2(N-1);//recursive case
+     cout<<N<<endl; //printing value
     
 }
 
@@ -27,8 +31,9 @@ void Recursion2(int N){
 int main()
 {
      int N;
-     cin>>N;
+    
+     N=5;
      Recursion(N);
-    //  Recursion2(N);
+     
 }
 

@@ -25,6 +25,8 @@ int main()
       ________________
       a^b=>0000 0011(=3)*/
       cout<<"Bitwise XOR: a^b="<<(a^b)<<endl;
+     
+    
 
 
 }
