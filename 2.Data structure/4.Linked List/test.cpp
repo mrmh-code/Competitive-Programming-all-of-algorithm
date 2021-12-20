@@ -1,55 +1,89 @@
 #include <bits/stdc++.h>
-    using namespace std;
-    struct node 
-    {
-      int data;
-      node* next;
-    };
-    void printlinkedlist(node* node)
-    {
-      int c=0; //taken just for good looking output
-      while(node!=NULL)
-      {
-        if(c>0)
-        {
-          cout<<"->"<<node->data;
-          node = node->next;
-        }
-        else
-        {
-          cout<<node->data;
-          node = node->next;
-          c++;
-        }
-      }
-      
+using namespace std;
+
+class Node{
+    public:
+        int data;
+        Node *next;
+
+    Node(int data){
+        this->data=data;
+        next=NULL;
     }
-    int main() {
-      int n;
-      cout<<"Enter no. of nodes=";
-      cin>>n; //User enters number of nodes he want.
-      int num,c=0; //initialized c for setting head with second node..
-      node* head = new node; //initialized head node
-      node * temp = new node; //initialized temp node 
-      cin>>num;
-      head->data=num;
-      for(int i=2;i<=n;i++)
-      {
-        if(c==0)
-        {
-          cin>>num;
-          temp->data=num;
-          head->next=temp; //head point to second node i.e. temp
-          c++;
+};
+
+Node* takeinput()
+{
+    int data;
+    cin>>data;
+
+    Node *head=NULL;
+    Node *tail=NULL;
+
+    while (data!=-1)
+    {
+        Node *n=new Node(data);
+        if(head==NULL){
+            head=n;
+            tail=n;
+        }else{
+            tail->next=n;
+            tail=n;
         }
-        else
-        {
-          cin>>num;
-          node * temp1 = new node; //initialize other temp node for every value 
-          temp1->data=num;
-          temp->next=temp1; //point to temp1 to temp 
-          temp=temp1; //set temp as temp1 
-        }
-      }
-      printlinkedlist(head); 
+        cin>>data;
     }
+
+    return head;
+    
+}
+
+Node* InsertIthNode(Node *head,int i, int data){
+    if(i<0){
+        return head;
+    }
+    if(i==0){
+        Node *n=new Node(data);
+        n->next=head;
+        head=n;
+        return head;
+
+    }
+
+    Node *copyhead=head;
+    int count=1;
+    while (count<=i-1 && head!=NULL)
+    {
+       head=head->next;
+       count++;
+    }
+
+    if(head){
+        Node *n=new Node(data);
+        Node *temp=head->next;
+        head->next=n;
+        n->next=temp;
+        return copyhead;
+    }
+
+    return copyhead;
+    
+}
+
+void print(Node *head){
+    while (head!=NULL)
+    {
+       cout<<head->data<<" ";
+       head=head->next;
+    }
+    cout<<endl;
+    
+}
+int main()
+{
+    Node *head=takeinput();
+    int i,data;
+    cin>>i>>data;
+    head=InsertIthNode(head,i,data);
+    print(head);
+    
+}
