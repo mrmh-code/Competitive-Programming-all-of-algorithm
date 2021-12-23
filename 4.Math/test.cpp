@@ -3,17 +3,24 @@ using namespace std;
 
 int main()
 {
-    int l,b;
-    cin>>l>>b;
-    int cnt=0;
-    while (1)
+    int t;
+    cin>>t;
+
+
+    while (t--)
     {
-        l=l*3;
-        b=b*2;
-        cnt++;
-        if(l>b){
-            break;
+        string s;
+        cin>>s;
+        string str1,str2;
+        for(int i=0; i<s.size(); i++){
+            if(i%2==0){
+                str1+=s[i];
+            }else{
+                str2+=s[i];
+            }
         }
+
+        cout<<str1<<" "<<str2<<endl;
     }
-    cout<<cnt<<endl;
+    
 }
