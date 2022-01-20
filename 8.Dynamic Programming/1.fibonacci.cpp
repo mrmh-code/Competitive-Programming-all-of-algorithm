@@ -43,15 +43,15 @@ int fib3(int n)
 
 int main()
 {
-    int n;
-    cin>>n;
+    // int n;
+    // cin>>n;
 
-    int *arr=new int(n+1);
-    for(int i=0; i<=n; i++){
-        arr[i]=0;
-    }
-    // cout<<fib(n)<<endl;
-    cout<<fib2(n,arr)<<endl;
-    cout<<fib3(n)<<endl;
+    // int *arr=new int(n+1);
+    // for(int i=0; i<=n; i++){
+    //     arr[i]=0;
+    // }
+    // // cout<<fib(n)<<endl;
+    // cout<<fib2(n,arr)<<endl;
+    // cout<<fib3(n)<<endl;
 
 }

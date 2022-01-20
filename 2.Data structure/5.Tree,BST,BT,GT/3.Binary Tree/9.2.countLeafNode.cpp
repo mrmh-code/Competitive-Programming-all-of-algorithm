@@ -86,5 +86,5 @@ int main()
 {
     BTNode<int> *root=takeInputLevelWise();
     cout<<CountLeafNode(root)<<endl;    
-
+ 
 }
