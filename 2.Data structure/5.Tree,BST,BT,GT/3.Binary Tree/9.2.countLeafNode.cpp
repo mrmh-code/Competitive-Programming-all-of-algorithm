@@ -84,7 +84,11 @@ int CountLeafNode(BTNode<int>* root)
 
 int main()
 {
-    BTNode<int> *root=takeInputLevelWise();
-    cout<<CountLeafNode(root)<<endl;    
- 
+    // BTNode<int> *root=takeInputLevelWise();
+    // cout<<CountLeafNode(root)<<endl;    
+    string s="abcabcabcabc";
+    string g="abc";
+        int t=s.find(g);
+
+        cout<<t<<endl;
 }
