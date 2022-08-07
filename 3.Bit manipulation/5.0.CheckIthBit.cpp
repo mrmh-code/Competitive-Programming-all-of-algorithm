@@ -14,5 +14,5 @@ int main()
     cin>>i;
 
     cout<<CheckIthBit(n,i)<<endl;
-
+    
 }

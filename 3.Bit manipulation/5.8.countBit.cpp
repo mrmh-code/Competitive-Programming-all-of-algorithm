@@ -20,3 +20,6 @@ int main(){
     cout<<count_bits(n)<<endl;
     
 }
+
+
+ 
