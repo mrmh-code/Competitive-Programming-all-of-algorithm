@@ -1,12 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// int checkIthBit(int n, int i){
-//     int mask=1<<i;
-
-//     return (mask&n)>0?1:0;
-// }
-
+ 
  int minimumOperations(vector<int>& nums) {
         sort(nums.begin(),nums.end());
         int cnt=0;
@@ -38,13 +33,44 @@ using namespace std;
       return cnt;
     }
 
+int checkIthBit(int n, int i){
+   int mask=1<<i;
+
+   return (n&mask)>0?1:0;
+}
+
+void clearIthBit(int &n, int i){
+   int mask=~(1<<i);
+   n=(n&mask);
+}
+
+
+void setBit(int &n, int i){
+   int mask=1<<i;
+   n=n|mask;
+}
+
+void updateIthBit(int &n, int i,int v){
+   clearIthBit(n,i);
+   int mask=1<<i;
+
+}
+
 int main()
 {
  
-    vector<int> nums ={1,5,0,3,5};
-    cout<< minimumOperations(nums)<<endl;
+   //  vector<int> nums ={1,5,0,3,5};
+   //  cout<< minimumOperations(nums)<<endl;
     
-      
+      // int a=9;
+      // updateIthBit(a,2,1);
+      // cout<<a<<endl;
+
+      // int res=5;
+      // for(int i=5; i<=7; i++){
+      //    cout<<(res&i+1)<<endl;
+      // }
+      cout<<(0&-0)<<endl;
 }
 
 //   int a=10,b=5;
