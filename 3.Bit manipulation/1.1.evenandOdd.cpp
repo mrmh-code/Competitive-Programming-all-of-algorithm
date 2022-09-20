@@ -1,17 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-    int num;
-    cin >> num;
+int main(){
 
-    if (num & 1)
-    {
-        cout << "num is odd Number " << endl;
-    }
-    else
-    {
-        cout << "num is Even Number" << endl;
+    int n;
+    cin>>n;
+
+    if(n&1){
+        cout<<"Number is odd number"<<endl;
+    }else{
+        cout<<"Number is Even Number "<<endl;
     }
 }

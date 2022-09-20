@@ -3,7 +3,7 @@ using namespace std;
 
 vector<int> generateSubSet(vector<int> nums, int number)
 {
-    vector<int> temp;
+    vector<int> temp; 
     int j = 0;
     while (number > 0)
     {

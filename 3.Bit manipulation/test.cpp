@@ -70,7 +70,15 @@ int main()
       // for(int i=5; i<=7; i++){
       //    cout<<(res&i+1)<<endl;
       // }
-      cout<<(0&-0)<<endl;
+      // cout<<(0&-0)<<endl;
+
+      vector<int>vec={2,2,2};
+      int ans=0;
+      for(int i=0; i<vec.size(); i++){
+         ans|=vec[i];
+      }
+
+      cout<<ans<<endl;
 }
 
 //   int a=10,b=5;
