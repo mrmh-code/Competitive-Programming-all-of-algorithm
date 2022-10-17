@@ -4,6 +4,8 @@
         "new": "cpp",
         "ostream": "cpp",
         "sstream": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "stacktrace": "cpp",
+        "*.tcc": "cpp"
     }
 }

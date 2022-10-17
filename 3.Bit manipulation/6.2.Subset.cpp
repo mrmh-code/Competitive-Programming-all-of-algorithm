@@ -28,4 +28,11 @@ int main()
     {
         ans.push_back(generateSubSet(vec, i));
     }
+
+     for(auto u: ans){
+        for(auto a: u){
+            cout<<a;
+        }
+        cout<<endl;
+     }
 }

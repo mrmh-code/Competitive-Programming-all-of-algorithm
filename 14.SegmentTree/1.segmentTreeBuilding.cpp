@@ -33,8 +33,8 @@ int main()
 
     build(1, 0, n - 1);
 
-    for (int i = 1; i < 4; i++)
+    for (int i = 1; i < (n*2)+1; i++)
     {
-        cout << tree[i] << endl;
+        cout << tree[i] << " ";
     }
 }

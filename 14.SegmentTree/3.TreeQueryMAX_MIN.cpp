@@ -21,6 +21,8 @@ void build(int node, int st, int en)
     tree[node] = tree[2 * node] + tree[2 * node + 1];
 }
 
+
+
 int MaxQuery(int node, int st, int en, int l, int r)
 {
     if (st > r || en < l)
@@ -38,7 +40,7 @@ int MaxQuery(int node, int st, int en, int l, int r)
     int q1 = MaxQuery(2 * node, st, mid, l, r);
     int q2 = MaxQuery(2 * node + 1, mid + 1, en, l, r);
 
-    return q1 + q2;
+    return max(q1,q2);
 }
 
 int MINQuery(int node, int st, int en, int l, int r)

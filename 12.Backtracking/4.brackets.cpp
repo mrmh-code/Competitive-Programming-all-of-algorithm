@@ -1,26 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void generateBrackets(string output, int n,int open,int close,int i)
+void generateBrackets(string output, int NumberOfBrackets, int OpenBrackets, int closeBrackets, int index)
 {
-    if(i==2*n){
-        cout<<output<<endl;
+    if (index == 2 * NumberOfBrackets)
+    {
+        cout << output << endl;
         return;
     }
 
-    if(open<n){
-        generateBrackets(output+'(', n,open+1,close,i+1);
+    if (OpenBrackets < NumberOfBrackets)
+    {
+        generateBrackets(output + '(', NumberOfBrackets, OpenBrackets + 1, closeBrackets, index + 1);
     }
 
-    if(close<open){
-        generateBrackets(output+')',n,open,close+1,i+1);
+    if (closeBrackets < OpenBrackets)
+    {
+        generateBrackets(output + ')', NumberOfBrackets, OpenBrackets, closeBrackets + 1, index + 1);
     }
 }
 
 int main()
 {
     string output;
-    int n;
-    cin>>n;
-    generateBrackets(output,n,0,0,0);
+    int NumberOfBrackets;
+    cin >> NumberOfBrackets;
+    generateBrackets(output, NumberOfBrackets, 0, 0, 0);
 }
