@@ -1,6 +1,18 @@
 # Competitive-Programming-all-of-algorithm
 This repositories will work all of algorithm code for competitive programming .
 
+## Standard Template Library (STL)
+ * Vector
+ * String
+ * Pair
+ * Map
+ * Set
+ * MultiSet
+ * Stack
+ * Queue
+ * Dequeue
+ * Priority Queue
+
 ## Data Structure
 * ADT
 * Stack
@@ -9,24 +21,27 @@ This repositories will work all of algorithm code for competitive programming .
 * Tree
 * Binary Search Tree(BST)
 * Generic Tree
-## Searching Technic
-* Binary search (lower bound,upper bound)
-* Linear Search
+* Matrices
+* DisJoint Set Union
 
-## Sorting Algorithm
-* Selection sort
-* Bubble Sort
-* Inbuilt Sort
-* Merge Sort
-* Quick Sort
-* Insertion Sort
-* Counting Sort
-
-## Basic Graph Theory
-* Adjacency Matrix
-* Weighted Graph
-* Breadth First Search(BFS)
-* Depth First Search(DFS)
+## Bit manipulation
+* And OR XOR Operation
+* Even And Odd
+* popCount builtinFunction
+* Left Shift & Right Shift
+* Check Ith Bit
+* Clear Ith Bit
+* setBit
+* UpdateIthBit
+* Clear Last Digit
+* Clear Bits of Range
+* Replace Bits
+* Power of Two
+* CountOf Bit
+* Convert Decimal to Binary
+* Array Unique Number
+* Subset
+* Array Unique Number another way
 
 ## Number Theory
 * simple Divisor
@@ -38,9 +53,9 @@ This repositories will work all of algorithm code for competitive programming .
 * prime factorization
 * Nod
 * Modular Arithmetic Sum
+* Big Addition
+* Big Factorial
 
-## Dynamic programming
-* Fibonacci
 
 ## Recursion
 * Factorial
@@ -58,17 +73,62 @@ This repositories will work all of algorithm code for competitive programming .
 * Check palindrome
 * Reverse Print
 * Replace char
-* etc
+* Remove Character
+* Print SubString
+* Convert String to Int
+* String Permutation
+* Tower Of Hanoi 
 
 
-## Standard Template Library (STL)
- * Vector
- * String
- * Pair
- * Map
- * Set
- * MultiSet
- * Stack
- * Queue
- * Dequeue
- * Priority Queue
+## Searching Technic
+* Binary search (lower bound,upper bound)
+* Linear Search
+
+## Sorting Algorithm
+* Selection sort
+* Bubble Sort
+* Inbuilt Sort
+* Merge Sort
+* Quick Sort
+* Insertion Sort
+* Counting Sort
+* Inversion Count
+
+## Graph Theory
+* Adjacency Matrix
+* Weighted Graph
+* Breadth First Search(BFS) & different way implementation
+* Depth First Search(DFS) & different way implementation
+* DisConnected Graph using BFS
+* DisConnected Graph using DFS
+* Find No Connected using DFS
+* Lowest Common Ancestor using TwoPointer
+* Topological Sort & different way implementation
+
+
+## Dynamic programming
+* Fibonacci
+
+## Linear Recurrences & Matrix Exponentiation
+* Binary Exponentiation Power
+* Modular Exponentiation
+* Fast Multiplication
+
+## Backtracking
+* Permutation
+* Maximum Bitwise or set
+* SubSet
+* Brackets
+* N-Queen
+
+## Segment Tree
+* Segment Tree Building
+* Segment Tree Query
+* Segment Tree Maximum Minimum Query
+* Update Operation
+* Lazy propagation
+* FenWick Tree
+
+## Sqrt DeComposition
+* Sqrt DeComposition
+* DeQuery

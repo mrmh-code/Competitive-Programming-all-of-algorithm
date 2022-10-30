@@ -6,6 +6,7 @@
         "sstream": "cpp",
         "regex": "cpp",
         "stacktrace": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "numbers": "cpp"
     }
 }
