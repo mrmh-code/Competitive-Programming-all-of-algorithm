@@ -6,13 +6,15 @@ using namespace std;
 int adj[100][100];
 int color[100];
 int node, edge;
+
+
 void Dfs_visit(int x)
 {
     color[x] = GRAY;
     cout << x << endl;
     for (int i = 0; i < node; ++i)
     {
-        if (adj[x][i] = 1)
+        if (adj[x][i] == 1)
         {
             if (color[i] == WHITE)
             {
