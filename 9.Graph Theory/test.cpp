@@ -1,37 +1,79 @@
 #include <bits/stdc++.h>
 using namespace std;
+typedef long long ll;
+typedef pair<ll, ll> pll;
+const long long infLL = 9000000000000000000;
+typedef vector<pll> vll;
+const int mx = 1e5 + 123;
+vector<pair<int, int>> adj[mx];
+ll dist[mx];
 
-void print(vector<vector<int>> v, int sv, vector<bool> &Visited)
+void dijkstra(int s, int n)
 {
-    cout << sv << endl;
-    Visited[sv] = true;
-    int n = v.size();
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i <= n; i++)
     {
-        if (v[sv][i] == 1 && Visited[i] == false)
+        dist[i] = infLL;
+    }
+
+    dist[s] = 0;
+    priority_queue<pll, vll, greater<pll>> pq;
+    pq.push({0, s});
+
+    while (!pq.empty())
+    {
+        int u = pq.top().second;
+        ll curD = pq.top().first;
+        pq.pop();
+
+        if (dist[u] < curD)
         {
-            print(v, i, Visited);
+            continue;
+        }
+
+        for (auto p : adj[u])
+        {
+            int v = p.first;
+            ll w = p.second;
+
+            if (curD + w < dist[v])
+            {
+                dist[v] = curD + w;
+                pq.push({dist[v], v});
+            }
         }
     }
 }
-//input 4 5 1 2 2 0 0 1 0 2 2 3
+
 int main()
 {
-    int n, e;
-    cin >> n >> e;
+    int n, m;
+    cin >> n >> m;
 
-    vector<vector<int>> matrix(n, vector<int>(n, 0));
-
-    for (int i = 1; i <= e; i++)
+    for (int i = 1; i <= m; i++)
     {
-        int fv, sv;
-        cin >> fv >> sv;
-
-        matrix[fv][sv] = 1;
-        // matrix[sv][fv] = 1;
+        int u, v, w;
+        cin >> u >> v >> w;
+        adj[u].push_back({v, w});
+        adj[v].push_back({u, w});
     }
 
-    vector<bool> visited(n, false);
-    print(matrix, 1, visited);
+    dijkstra(0, n);
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << dist[i] << " ";
+    }
+    cout << endl;
 }
+
+/*
+5 7
+1 3 3
+1 2 2
+1 4 6
+2 0 6
+2 3 7
+0 4 3
+3 4 5
+*/
