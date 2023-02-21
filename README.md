@@ -104,10 +104,23 @@ This repositories will work all of algorithm code for competitive programming .
 * Find No Connected using DFS
 * Lowest Common Ancestor using TwoPointer
 * Topological Sort & different way implementation
+* Dijkstra Algorithm
+* FloydWarshall algorithm
+* Bellmanford algorithm
+* prims
+
 
 
 ## Dynamic programming
 * Fibonacci
+* Fibonacci bottom up
+* Fibonacci to down
+* N-K Ladders
+* Minimum jumps
+* Longest Increasing subsequence
+* Longest common subsequence
+* Knapsack
+* Coin Change
 
 ## Linear Recurrences & Matrix Exponentiation
 * Binary Exponentiation Power
